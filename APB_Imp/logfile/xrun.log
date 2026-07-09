@@ -1,0 +1,776 @@
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun	25.03-s001: Started on Jul 09, 2026 at 02:17:28 EDT
+xrun
+	-Q
+	-unbuffered
+	-timescale 1ns/1ns
+	-sysv
+	-coverage all
+	-input run.do
+	design.sv
+	testbench.sv
+package apb_pkg;
+              |
+xmvlog: *W,TSNSPK (apb_pkg.svh,1|14): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+	Top level design units:
+		apb_pkg
+		tb
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+  logic [31:0] mem [255:0];
+                 |
+xmelab: *W,COVMDD (./design.sv,2|17): Toggle coverage for bit, logic, reg, wire, enum and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage for enum multi-dimensional static arrays specify 'set_toggle_scoring -sv_enum enable_mda' and for other multi-dimensional static arrays, specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+Loading snapshot worklib.tb:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+---------------------------------------------------------------------
+[0] [GEN] : WRITE ADDR : 0x000001b0 , DATA : 0x31590bce , ERR = 0
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 38, pos = 12
+           Scope: tb
+            Time: 0 FS + 0
+
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 39, pos = 12
+           Scope: tb
+            Time: 0 FS + 0
+
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 40, pos = 12
+           Scope: tb
+            Time: 0 FS + 0
+
+[75] [MON] : WRITE ADDR : 0x000001b0 , DATA : 0x31590bce , ERR = 0
+[75] [SCO] : WRITE ADDR : 0x000001b0 , DATA : 0x31590bce , ERR = 0
+[SCO] : DATA STORED DATA : 0x31590bce ADDR : 0x000001b0
+---------------------------------------------------------------------
+[75] [GEN] :  READ ADDR : 0x000002bc , DATA : 0x00000000 , ERR = 0
+[135] [MON] :  READ ADDR : 0x000002bc , DATA : 0x00000000 , ERR = 0
+[135] [SCO] :  READ ADDR : 0x000002bc , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[135] [GEN] : WRITE ADDR : 0x00000278 , DATA : 0x35df52e1 , ERR = 0
+[195] [MON] : WRITE ADDR : 0x00000278 , DATA : 0x35df52e1 , ERR = 0
+[195] [SCO] : WRITE ADDR : 0x00000278 , DATA : 0x35df52e1 , ERR = 0
+[SCO] : DATA STORED DATA : 0x35df52e1 ADDR : 0x00000278
+---------------------------------------------------------------------
+[195] [GEN] :  READ ADDR : 0x00000110 , DATA : 0x00000000 , ERR = 0
+[255] [MON] :  READ ADDR : 0x00000110 , DATA : 0x00000000 , ERR = 0
+[255] [SCO] :  READ ADDR : 0x00000110 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[255] [GEN] : WRITE ADDR : 0x0000037c , DATA : 0x57d600a2 , ERR = 0
+[315] [MON] : WRITE ADDR : 0x0000037c , DATA : 0x57d600a2 , ERR = 0
+[315] [SCO] : WRITE ADDR : 0x0000037c , DATA : 0x57d600a2 , ERR = 0
+[SCO] : DATA STORED DATA : 0x57d600a2 ADDR : 0x0000037c
+---------------------------------------------------------------------
+[315] [GEN] :  READ ADDR : 0x00000074 , DATA : 0x00000000 , ERR = 0
+[375] [MON] :  READ ADDR : 0x00000074 , DATA : 0x00000000 , ERR = 0
+[375] [SCO] :  READ ADDR : 0x00000074 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[375] [GEN] : WRITE ADDR : 0x0000031c , DATA : 0x83bbe11b , ERR = 0
+[435] [MON] : WRITE ADDR : 0x0000031c , DATA : 0x83bbe11b , ERR = 0
+[435] [SCO] : WRITE ADDR : 0x0000031c , DATA : 0x83bbe11b , ERR = 0
+[SCO] : DATA STORED DATA : 0x83bbe11b ADDR : 0x0000031c
+---------------------------------------------------------------------
+[435] [GEN] :  READ ADDR : 0x00000220 , DATA : 0x00000000 , ERR = 0
+[495] [MON] :  READ ADDR : 0x00000220 , DATA : 0x00000000 , ERR = 0
+[495] [SCO] :  READ ADDR : 0x00000220 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[495] [GEN] :  READ ADDR : 0x00000574 , DATA : 0x00000000 , ERR = 0
+[555] [MON] :  READ ADDR : 0x00000574 , DATA : 0x00000000 , ERR = 1
+[555] [SCO] :  READ ADDR : 0x00000574 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[555] [GEN] : WRITE ADDR : 0x00000514 , DATA : 0x55c5b295 , ERR = 0
+[615] [MON] : WRITE ADDR : 0x00000514 , DATA : 0x55c5b295 , ERR = 1
+[615] [SCO] : WRITE ADDR : 0x00000514 , DATA : 0x55c5b295 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[615] [GEN] : WRITE ADDR : 0x00000064 , DATA : 0x48c22aa0 , ERR = 0
+[675] [MON] : WRITE ADDR : 0x00000064 , DATA : 0x48c22aa0 , ERR = 0
+[675] [SCO] : WRITE ADDR : 0x00000064 , DATA : 0x48c22aa0 , ERR = 0
+[SCO] : DATA STORED DATA : 0x48c22aa0 ADDR : 0x00000064
+---------------------------------------------------------------------
+[675] [GEN] :  READ ADDR : 0x000002b0 , DATA : 0x00000000 , ERR = 0
+[735] [MON] :  READ ADDR : 0x000002b0 , DATA : 0x00000000 , ERR = 0
+[735] [SCO] :  READ ADDR : 0x000002b0 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[735] [GEN] : WRITE ADDR : 0x000000b0 , DATA : 0x701b4ab7 , ERR = 0
+[795] [MON] : WRITE ADDR : 0x000000b0 , DATA : 0x701b4ab7 , ERR = 0
+[795] [SCO] : WRITE ADDR : 0x000000b0 , DATA : 0x701b4ab7 , ERR = 0
+[SCO] : DATA STORED DATA : 0x701b4ab7 ADDR : 0x000000b0
+---------------------------------------------------------------------
+[795] [GEN] :  READ ADDR : 0x000002f4 , DATA : 0x00000000 , ERR = 0
+[855] [MON] :  READ ADDR : 0x000002f4 , DATA : 0x00000000 , ERR = 0
+[855] [SCO] :  READ ADDR : 0x000002f4 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[855] [GEN] : WRITE ADDR : 0x000001cc , DATA : 0x0a299f1e , ERR = 0
+[915] [MON] : WRITE ADDR : 0x000001cc , DATA : 0x0a299f1e , ERR = 0
+[915] [SCO] : WRITE ADDR : 0x000001cc , DATA : 0x0a299f1e , ERR = 0
+[SCO] : DATA STORED DATA : 0x0a299f1e ADDR : 0x000001cc
+---------------------------------------------------------------------
+[915] [GEN] :  READ ADDR : 0x000003c0 , DATA : 0x00000000 , ERR = 0
+[975] [MON] :  READ ADDR : 0x000003c0 , DATA : 0x00000000 , ERR = 0
+[975] [SCO] :  READ ADDR : 0x000003c0 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[975] [GEN] : WRITE ADDR : 0x000000bc , DATA : 0x21d9270e , ERR = 0
+[1035] [MON] : WRITE ADDR : 0x000000bc , DATA : 0x21d9270e , ERR = 0
+[1035] [SCO] : WRITE ADDR : 0x000000bc , DATA : 0x21d9270e , ERR = 0
+[SCO] : DATA STORED DATA : 0x21d9270e ADDR : 0x000000bc
+---------------------------------------------------------------------
+[1035] [GEN] :  READ ADDR : 0x0000036c , DATA : 0x00000000 , ERR = 0
+[1095] [MON] :  READ ADDR : 0x0000036c , DATA : 0x00000000 , ERR = 0
+[1095] [SCO] :  READ ADDR : 0x0000036c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[1095] [GEN] :  READ ADDR : 0x0000005c , DATA : 0x00000000 , ERR = 0
+[1155] [MON] :  READ ADDR : 0x0000005c , DATA : 0x00000000 , ERR = 0
+[1155] [SCO] :  READ ADDR : 0x0000005c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[1155] [GEN] : WRITE ADDR : 0x0000022c , DATA : 0xb10017bf , ERR = 0
+[1215] [MON] : WRITE ADDR : 0x0000022c , DATA : 0xb10017bf , ERR = 0
+[1215] [SCO] : WRITE ADDR : 0x0000022c , DATA : 0xb10017bf , ERR = 0
+[SCO] : DATA STORED DATA : 0xb10017bf ADDR : 0x0000022c
+---------------------------------------------------------------------
+[1215] [GEN] : WRITE ADDR : 0x000007b0 , DATA : 0xad566f13 , ERR = 0
+[1275] [MON] : WRITE ADDR : 0x000007b0 , DATA : 0xad566f13 , ERR = 1
+[1275] [SCO] : WRITE ADDR : 0x000007b0 , DATA : 0xad566f13 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[1275] [GEN] :  READ ADDR : 0x000001a8 , DATA : 0x00000000 , ERR = 0
+[1335] [MON] :  READ ADDR : 0x000001a8 , DATA : 0x00000000 , ERR = 0
+[1335] [SCO] :  READ ADDR : 0x000001a8 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[1335] [GEN] :  READ ADDR : 0x000007b4 , DATA : 0x00000000 , ERR = 0
+[1395] [MON] :  READ ADDR : 0x000007b4 , DATA : 0x00000000 , ERR = 1
+[1395] [SCO] :  READ ADDR : 0x000007b4 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[1395] [GEN] : WRITE ADDR : 0x000000a4 , DATA : 0x23ee3dc5 , ERR = 0
+[1455] [MON] : WRITE ADDR : 0x000000a4 , DATA : 0x23ee3dc5 , ERR = 0
+[1455] [SCO] : WRITE ADDR : 0x000000a4 , DATA : 0x23ee3dc5 , ERR = 0
+[SCO] : DATA STORED DATA : 0x23ee3dc5 ADDR : 0x000000a4
+---------------------------------------------------------------------
+[1455] [GEN] : WRITE ADDR : 0x00000054 , DATA : 0x97292640 , ERR = 0
+[1515] [MON] : WRITE ADDR : 0x00000054 , DATA : 0x97292640 , ERR = 0
+[1515] [SCO] : WRITE ADDR : 0x00000054 , DATA : 0x97292640 , ERR = 0
+[SCO] : DATA STORED DATA : 0x97292640 ADDR : 0x00000054
+---------------------------------------------------------------------
+[1515] [GEN] :  READ ADDR : 0x0000012c , DATA : 0x00000000 , ERR = 0
+[1575] [MON] :  READ ADDR : 0x0000012c , DATA : 0x00000000 , ERR = 0
+[1575] [SCO] :  READ ADDR : 0x0000012c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[1575] [GEN] : WRITE ADDR : 0x000003c8 , DATA : 0xbf1b8a46 , ERR = 0
+[1635] [MON] : WRITE ADDR : 0x000003c8 , DATA : 0xbf1b8a46 , ERR = 0
+[1635] [SCO] : WRITE ADDR : 0x000003c8 , DATA : 0xbf1b8a46 , ERR = 0
+[SCO] : DATA STORED DATA : 0xbf1b8a46 ADDR : 0x000003c8
+---------------------------------------------------------------------
+[1635] [GEN] :  READ ADDR : 0x000001dc , DATA : 0x00000000 , ERR = 0
+[1695] [MON] :  READ ADDR : 0x000001dc , DATA : 0x00000000 , ERR = 0
+[1695] [SCO] :  READ ADDR : 0x000001dc , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[1695] [GEN] :  READ ADDR : 0x00000064 , DATA : 0x00000000 , ERR = 0
+[1755] [MON] :  READ ADDR : 0x00000064 , DATA : 0x48c22aa0 , ERR = 0
+[1755] [SCO] :  READ ADDR : 0x00000064 , DATA : 0x48c22aa0 , ERR = 0
+[PASS] Addr: 0x00000064 | Expected: 0x48c22aa0, Got: 0x48c22aa0
+---------------------------------------------------------------------
+[1755] [GEN] : WRITE ADDR : 0x000003dc , DATA : 0x48915939 , ERR = 0
+[1815] [MON] : WRITE ADDR : 0x000003dc , DATA : 0x48915939 , ERR = 0
+[1815] [SCO] : WRITE ADDR : 0x000003dc , DATA : 0x48915939 , ERR = 0
+[SCO] : DATA STORED DATA : 0x48915939 ADDR : 0x000003dc
+---------------------------------------------------------------------
+[1815] [GEN] : WRITE ADDR : 0x000003d8 , DATA : 0x53e44545 , ERR = 0
+[1875] [MON] : WRITE ADDR : 0x000003d8 , DATA : 0x53e44545 , ERR = 0
+[1875] [SCO] : WRITE ADDR : 0x000003d8 , DATA : 0x53e44545 , ERR = 0
+[SCO] : DATA STORED DATA : 0x53e44545 ADDR : 0x000003d8
+---------------------------------------------------------------------
+[1875] [GEN] :  READ ADDR : 0x000001d8 , DATA : 0x00000000 , ERR = 0
+[1935] [MON] :  READ ADDR : 0x000001d8 , DATA : 0x00000000 , ERR = 0
+[1935] [SCO] :  READ ADDR : 0x000001d8 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[1935] [GEN] : WRITE ADDR : 0x000003f4 , DATA : 0x7056230d , ERR = 0
+[1995] [MON] : WRITE ADDR : 0x000003f4 , DATA : 0x7056230d , ERR = 0
+[1995] [SCO] : WRITE ADDR : 0x000003f4 , DATA : 0x7056230d , ERR = 0
+[SCO] : DATA STORED DATA : 0x7056230d ADDR : 0x000003f4
+---------------------------------------------------------------------
+[1995] [GEN] :  READ ADDR : 0x00000058 , DATA : 0x00000000 , ERR = 0
+[2055] [MON] :  READ ADDR : 0x00000058 , DATA : 0x00000000 , ERR = 0
+[2055] [SCO] :  READ ADDR : 0x00000058 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[2055] [GEN] :  READ ADDR : 0x0000007c , DATA : 0x00000000 , ERR = 0
+[2115] [MON] :  READ ADDR : 0x0000007c , DATA : 0x00000000 , ERR = 0
+[2115] [SCO] :  READ ADDR : 0x0000007c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[2115] [GEN] : WRITE ADDR : 0x000007dc , DATA : 0x117ab735 , ERR = 0
+[2175] [MON] : WRITE ADDR : 0x000007dc , DATA : 0x117ab735 , ERR = 1
+[2175] [SCO] : WRITE ADDR : 0x000007dc , DATA : 0x117ab735 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[2175] [GEN] :  READ ADDR : 0x0000000c , DATA : 0x00000000 , ERR = 0
+[2235] [MON] :  READ ADDR : 0x0000000c , DATA : 0x00000000 , ERR = 0
+[2235] [SCO] :  READ ADDR : 0x0000000c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[2235] [GEN] : WRITE ADDR : 0x000001cc , DATA : 0x4e6c4c03 , ERR = 0
+[2295] [MON] : WRITE ADDR : 0x000001cc , DATA : 0x4e6c4c03 , ERR = 0
+[2295] [SCO] : WRITE ADDR : 0x000001cc , DATA : 0x4e6c4c03 , ERR = 0
+[SCO] : DATA STORED DATA : 0x4e6c4c03 ADDR : 0x000001cc
+---------------------------------------------------------------------
+[2295] [GEN] : WRITE ADDR : 0x00000290 , DATA : 0x96ea55b6 , ERR = 0
+[2355] [MON] : WRITE ADDR : 0x00000290 , DATA : 0x96ea55b6 , ERR = 0
+[2355] [SCO] : WRITE ADDR : 0x00000290 , DATA : 0x96ea55b6 , ERR = 0
+[SCO] : DATA STORED DATA : 0x96ea55b6 ADDR : 0x00000290
+---------------------------------------------------------------------
+[2355] [GEN] :  READ ADDR : 0x000006e4 , DATA : 0x00000000 , ERR = 0
+[2415] [MON] :  READ ADDR : 0x000006e4 , DATA : 0x00000000 , ERR = 1
+[2415] [SCO] :  READ ADDR : 0x000006e4 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[2415] [GEN] :  READ ADDR : 0x00000230 , DATA : 0x00000000 , ERR = 0
+[2475] [MON] :  READ ADDR : 0x00000230 , DATA : 0x00000000 , ERR = 0
+[2475] [SCO] :  READ ADDR : 0x00000230 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[2475] [GEN] : WRITE ADDR : 0x000000bc , DATA : 0xdc8753bc , ERR = 0
+[2535] [MON] : WRITE ADDR : 0x000000bc , DATA : 0xdc8753bc , ERR = 0
+[2535] [SCO] : WRITE ADDR : 0x000000bc , DATA : 0xdc8753bc , ERR = 0
+[SCO] : DATA STORED DATA : 0xdc8753bc ADDR : 0x000000bc
+---------------------------------------------------------------------
+[2535] [GEN] :  READ ADDR : 0x000000c4 , DATA : 0x00000000 , ERR = 0
+[2595] [MON] :  READ ADDR : 0x000000c4 , DATA : 0x00000000 , ERR = 0
+[2595] [SCO] :  READ ADDR : 0x000000c4 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[2595] [GEN] : WRITE ADDR : 0x00000370 , DATA : 0xa75b9ae9 , ERR = 0
+[2655] [MON] : WRITE ADDR : 0x00000370 , DATA : 0xa75b9ae9 , ERR = 0
+[2655] [SCO] : WRITE ADDR : 0x00000370 , DATA : 0xa75b9ae9 , ERR = 0
+[SCO] : DATA STORED DATA : 0xa75b9ae9 ADDR : 0x00000370
+---------------------------------------------------------------------
+[2655] [GEN] :  READ ADDR : 0x00000320 , DATA : 0x00000000 , ERR = 0
+[2715] [MON] :  READ ADDR : 0x00000320 , DATA : 0x00000000 , ERR = 0
+[2715] [SCO] :  READ ADDR : 0x00000320 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[2715] [GEN] : WRITE ADDR : 0x000001b8 , DATA : 0x885fafb3 , ERR = 0
+[2775] [MON] : WRITE ADDR : 0x000001b8 , DATA : 0x885fafb3 , ERR = 0
+[2775] [SCO] : WRITE ADDR : 0x000001b8 , DATA : 0x885fafb3 , ERR = 0
+[SCO] : DATA STORED DATA : 0x885fafb3 ADDR : 0x000001b8
+---------------------------------------------------------------------
+[2775] [GEN] : WRITE ADDR : 0x0000013c , DATA : 0x9194105f , ERR = 0
+[2835] [MON] : WRITE ADDR : 0x0000013c , DATA : 0x9194105f , ERR = 0
+[2835] [SCO] : WRITE ADDR : 0x0000013c , DATA : 0x9194105f , ERR = 0
+[SCO] : DATA STORED DATA : 0x9194105f ADDR : 0x0000013c
+---------------------------------------------------------------------
+[2835] [GEN] :  READ ADDR : 0x000002f0 , DATA : 0x00000000 , ERR = 0
+[2895] [MON] :  READ ADDR : 0x000002f0 , DATA : 0x00000000 , ERR = 0
+[2895] [SCO] :  READ ADDR : 0x000002f0 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[2895] [GEN] :  READ ADDR : 0x000001b8 , DATA : 0x00000000 , ERR = 0
+[2955] [MON] :  READ ADDR : 0x000001b8 , DATA : 0x885fafb3 , ERR = 0
+[2955] [SCO] :  READ ADDR : 0x000001b8 , DATA : 0x885fafb3 , ERR = 0
+[PASS] Addr: 0x000001b8 | Expected: 0x885fafb3, Got: 0x885fafb3
+---------------------------------------------------------------------
+[2955] [GEN] : WRITE ADDR : 0x0000061c , DATA : 0x497f8d5f , ERR = 0
+[3015] [MON] : WRITE ADDR : 0x0000061c , DATA : 0x497f8d5f , ERR = 1
+[3015] [SCO] : WRITE ADDR : 0x0000061c , DATA : 0x497f8d5f , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[3015] [GEN] : WRITE ADDR : 0x00000764 , DATA : 0x392b950a , ERR = 0
+[3075] [MON] : WRITE ADDR : 0x00000764 , DATA : 0x392b950a , ERR = 1
+[3075] [SCO] : WRITE ADDR : 0x00000764 , DATA : 0x392b950a , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[3075] [GEN] :  READ ADDR : 0x00000064 , DATA : 0x00000000 , ERR = 0
+[3135] [MON] :  READ ADDR : 0x00000064 , DATA : 0x48c22aa0 , ERR = 0
+[3135] [SCO] :  READ ADDR : 0x00000064 , DATA : 0x48c22aa0 , ERR = 0
+[PASS] Addr: 0x00000064 | Expected: 0x48c22aa0, Got: 0x48c22aa0
+---------------------------------------------------------------------
+[3135] [GEN] :  READ ADDR : 0x00000290 , DATA : 0x00000000 , ERR = 0
+[3195] [MON] :  READ ADDR : 0x00000290 , DATA : 0x96ea55b6 , ERR = 0
+[3195] [SCO] :  READ ADDR : 0x00000290 , DATA : 0x96ea55b6 , ERR = 0
+[PASS] Addr: 0x00000290 | Expected: 0x96ea55b6, Got: 0x96ea55b6
+---------------------------------------------------------------------
+[3195] [GEN] : WRITE ADDR : 0x000000f8 , DATA : 0x0557b06b , ERR = 0
+[3255] [MON] : WRITE ADDR : 0x000000f8 , DATA : 0x0557b06b , ERR = 0
+[3255] [SCO] : WRITE ADDR : 0x000000f8 , DATA : 0x0557b06b , ERR = 0
+[SCO] : DATA STORED DATA : 0x0557b06b ADDR : 0x000000f8
+---------------------------------------------------------------------
+[3255] [GEN] :  READ ADDR : 0x000005c0 , DATA : 0x00000000 , ERR = 0
+[3315] [MON] :  READ ADDR : 0x000005c0 , DATA : 0x00000000 , ERR = 1
+[3315] [SCO] :  READ ADDR : 0x000005c0 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[3315] [GEN] : WRITE ADDR : 0x00000128 , DATA : 0x0054d3d7 , ERR = 0
+[3375] [MON] : WRITE ADDR : 0x00000128 , DATA : 0x0054d3d7 , ERR = 0
+[3375] [SCO] : WRITE ADDR : 0x00000128 , DATA : 0x0054d3d7 , ERR = 0
+[SCO] : DATA STORED DATA : 0x0054d3d7 ADDR : 0x00000128
+---------------------------------------------------------------------
+[3375] [GEN] : WRITE ADDR : 0x00000110 , DATA : 0x376f67ef , ERR = 0
+[3435] [MON] : WRITE ADDR : 0x00000110 , DATA : 0x376f67ef , ERR = 0
+[3435] [SCO] : WRITE ADDR : 0x00000110 , DATA : 0x376f67ef , ERR = 0
+[SCO] : DATA STORED DATA : 0x376f67ef ADDR : 0x00000110
+---------------------------------------------------------------------
+[3435] [GEN] :  READ ADDR : 0x00000508 , DATA : 0x00000000 , ERR = 0
+[3495] [MON] :  READ ADDR : 0x00000508 , DATA : 0x00000000 , ERR = 1
+[3495] [SCO] :  READ ADDR : 0x00000508 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[3495] [GEN] : WRITE ADDR : 0x00000080 , DATA : 0x122d4f91 , ERR = 0
+[3555] [MON] : WRITE ADDR : 0x00000080 , DATA : 0x122d4f91 , ERR = 0
+[3555] [SCO] : WRITE ADDR : 0x00000080 , DATA : 0x122d4f91 , ERR = 0
+[SCO] : DATA STORED DATA : 0x122d4f91 ADDR : 0x00000080
+---------------------------------------------------------------------
+[3555] [GEN] :  READ ADDR : 0x00000114 , DATA : 0x00000000 , ERR = 0
+[3615] [MON] :  READ ADDR : 0x00000114 , DATA : 0x00000000 , ERR = 0
+[3615] [SCO] :  READ ADDR : 0x00000114 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[3615] [GEN] :  READ ADDR : 0x00000148 , DATA : 0x00000000 , ERR = 0
+[3675] [MON] :  READ ADDR : 0x00000148 , DATA : 0x00000000 , ERR = 0
+[3675] [SCO] :  READ ADDR : 0x00000148 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[3675] [GEN] : WRITE ADDR : 0x00000160 , DATA : 0xfb3d1b5e , ERR = 0
+[3735] [MON] : WRITE ADDR : 0x00000160 , DATA : 0xfb3d1b5e , ERR = 0
+[3735] [SCO] : WRITE ADDR : 0x00000160 , DATA : 0xfb3d1b5e , ERR = 0
+[SCO] : DATA STORED DATA : 0xfb3d1b5e ADDR : 0x00000160
+---------------------------------------------------------------------
+[3735] [GEN] : WRITE ADDR : 0x000003ec , DATA : 0x2e32c7cf , ERR = 0
+[3795] [MON] : WRITE ADDR : 0x000003ec , DATA : 0x2e32c7cf , ERR = 0
+[3795] [SCO] : WRITE ADDR : 0x000003ec , DATA : 0x2e32c7cf , ERR = 0
+[SCO] : DATA STORED DATA : 0x2e32c7cf ADDR : 0x000003ec
+---------------------------------------------------------------------
+[3795] [GEN] :  READ ADDR : 0x000001c4 , DATA : 0x00000000 , ERR = 0
+[3855] [MON] :  READ ADDR : 0x000001c4 , DATA : 0x00000000 , ERR = 0
+[3855] [SCO] :  READ ADDR : 0x000001c4 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[3855] [GEN] :  READ ADDR : 0x0000001c , DATA : 0x00000000 , ERR = 0
+[3915] [MON] :  READ ADDR : 0x0000001c , DATA : 0x00000000 , ERR = 0
+[3915] [SCO] :  READ ADDR : 0x0000001c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[3915] [GEN] : WRITE ADDR : 0x00000188 , DATA : 0x296b2066 , ERR = 0
+[3975] [MON] : WRITE ADDR : 0x00000188 , DATA : 0x296b2066 , ERR = 0
+[3975] [SCO] : WRITE ADDR : 0x00000188 , DATA : 0x296b2066 , ERR = 0
+[SCO] : DATA STORED DATA : 0x296b2066 ADDR : 0x00000188
+---------------------------------------------------------------------
+[3975] [GEN] : WRITE ADDR : 0x00000300 , DATA : 0xf958cbf6 , ERR = 0
+[4035] [MON] : WRITE ADDR : 0x00000300 , DATA : 0xf958cbf6 , ERR = 0
+[4035] [SCO] : WRITE ADDR : 0x00000300 , DATA : 0xf958cbf6 , ERR = 0
+[SCO] : DATA STORED DATA : 0xf958cbf6 ADDR : 0x00000300
+---------------------------------------------------------------------
+[4035] [GEN] :  READ ADDR : 0x000000ec , DATA : 0x00000000 , ERR = 0
+[4095] [MON] :  READ ADDR : 0x000000ec , DATA : 0x00000000 , ERR = 0
+[4095] [SCO] :  READ ADDR : 0x000000ec , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[4095] [GEN] :  READ ADDR : 0x000001ec , DATA : 0x00000000 , ERR = 0
+[4155] [MON] :  READ ADDR : 0x000001ec , DATA : 0x00000000 , ERR = 0
+[4155] [SCO] :  READ ADDR : 0x000001ec , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[4155] [GEN] : WRITE ADDR : 0x0000034c , DATA : 0x380bcd7c , ERR = 0
+[4215] [MON] : WRITE ADDR : 0x0000034c , DATA : 0x380bcd7c , ERR = 0
+[4215] [SCO] : WRITE ADDR : 0x0000034c , DATA : 0x380bcd7c , ERR = 0
+[SCO] : DATA STORED DATA : 0x380bcd7c ADDR : 0x0000034c
+---------------------------------------------------------------------
+[4215] [GEN] : WRITE ADDR : 0x0000011c , DATA : 0x4c1598ac , ERR = 0
+[4275] [MON] : WRITE ADDR : 0x0000011c , DATA : 0x4c1598ac , ERR = 0
+[4275] [SCO] : WRITE ADDR : 0x0000011c , DATA : 0x4c1598ac , ERR = 0
+[SCO] : DATA STORED DATA : 0x4c1598ac ADDR : 0x0000011c
+---------------------------------------------------------------------
+[4275] [GEN] :  READ ADDR : 0x00000350 , DATA : 0x00000000 , ERR = 0
+[4335] [MON] :  READ ADDR : 0x00000350 , DATA : 0x00000000 , ERR = 0
+[4335] [SCO] :  READ ADDR : 0x00000350 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[4335] [GEN] :  READ ADDR : 0x000002e8 , DATA : 0x00000000 , ERR = 0
+[4395] [MON] :  READ ADDR : 0x000002e8 , DATA : 0x00000000 , ERR = 0
+[4395] [SCO] :  READ ADDR : 0x000002e8 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[4395] [GEN] : WRITE ADDR : 0x00000290 , DATA : 0xa435d5da , ERR = 0
+[4455] [MON] : WRITE ADDR : 0x00000290 , DATA : 0xa435d5da , ERR = 0
+[4455] [SCO] : WRITE ADDR : 0x00000290 , DATA : 0xa435d5da , ERR = 0
+[SCO] : DATA STORED DATA : 0xa435d5da ADDR : 0x00000290
+---------------------------------------------------------------------
+[4455] [GEN] : WRITE ADDR : 0x000000b0 , DATA : 0x940e3b5a , ERR = 0
+[4515] [MON] : WRITE ADDR : 0x000000b0 , DATA : 0x940e3b5a , ERR = 0
+[4515] [SCO] : WRITE ADDR : 0x000000b0 , DATA : 0x940e3b5a , ERR = 0
+[SCO] : DATA STORED DATA : 0x940e3b5a ADDR : 0x000000b0
+---------------------------------------------------------------------
+[4515] [GEN] :  READ ADDR : 0x00000604 , DATA : 0x00000000 , ERR = 0
+[4575] [MON] :  READ ADDR : 0x00000604 , DATA : 0x00000000 , ERR = 1
+[4575] [SCO] :  READ ADDR : 0x00000604 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[4575] [GEN] :  READ ADDR : 0x0000008c , DATA : 0x00000000 , ERR = 0
+[4635] [MON] :  READ ADDR : 0x0000008c , DATA : 0x00000000 , ERR = 0
+[4635] [SCO] :  READ ADDR : 0x0000008c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[4635] [GEN] : WRITE ADDR : 0x00000148 , DATA : 0x18219ba6 , ERR = 0
+[4695] [MON] : WRITE ADDR : 0x00000148 , DATA : 0x18219ba6 , ERR = 0
+[4695] [SCO] : WRITE ADDR : 0x00000148 , DATA : 0x18219ba6 , ERR = 0
+[SCO] : DATA STORED DATA : 0x18219ba6 ADDR : 0x00000148
+---------------------------------------------------------------------
+[4695] [GEN] : WRITE ADDR : 0x00000630 , DATA : 0x6643b115 , ERR = 0
+[4755] [MON] : WRITE ADDR : 0x00000630 , DATA : 0x6643b115 , ERR = 1
+[4755] [SCO] : WRITE ADDR : 0x00000630 , DATA : 0x6643b115 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[4755] [GEN] :  READ ADDR : 0x000000e0 , DATA : 0x00000000 , ERR = 0
+[4815] [MON] :  READ ADDR : 0x000000e0 , DATA : 0x00000000 , ERR = 0
+[4815] [SCO] :  READ ADDR : 0x000000e0 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[4815] [GEN] : WRITE ADDR : 0x000002cc , DATA : 0xeecfc812 , ERR = 0
+[4875] [MON] : WRITE ADDR : 0x000002cc , DATA : 0xeecfc812 , ERR = 0
+[4875] [SCO] : WRITE ADDR : 0x000002cc , DATA : 0xeecfc812 , ERR = 0
+[SCO] : DATA STORED DATA : 0xeecfc812 ADDR : 0x000002cc
+---------------------------------------------------------------------
+[4875] [GEN] :  READ ADDR : 0x00000130 , DATA : 0x00000000 , ERR = 0
+[4935] [MON] :  READ ADDR : 0x00000130 , DATA : 0x00000000 , ERR = 0
+[4935] [SCO] :  READ ADDR : 0x00000130 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[4935] [GEN] : WRITE ADDR : 0x000001b4 , DATA : 0x6133145b , ERR = 0
+[4995] [MON] : WRITE ADDR : 0x000001b4 , DATA : 0x6133145b , ERR = 0
+[4995] [SCO] : WRITE ADDR : 0x000001b4 , DATA : 0x6133145b , ERR = 0
+[SCO] : DATA STORED DATA : 0x6133145b ADDR : 0x000001b4
+---------------------------------------------------------------------
+[4995] [GEN] :  READ ADDR : 0x000002e0 , DATA : 0x00000000 , ERR = 0
+[5055] [MON] :  READ ADDR : 0x000002e0 , DATA : 0x00000000 , ERR = 0
+[5055] [SCO] :  READ ADDR : 0x000002e0 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[5055] [GEN] : WRITE ADDR : 0x00000234 , DATA : 0x7dc8f2c6 , ERR = 0
+[5115] [MON] : WRITE ADDR : 0x00000234 , DATA : 0x7dc8f2c6 , ERR = 0
+[5115] [SCO] : WRITE ADDR : 0x00000234 , DATA : 0x7dc8f2c6 , ERR = 0
+[SCO] : DATA STORED DATA : 0x7dc8f2c6 ADDR : 0x00000234
+---------------------------------------------------------------------
+[5115] [GEN] :  READ ADDR : 0x00000498 , DATA : 0x00000000 , ERR = 0
+[5175] [MON] :  READ ADDR : 0x00000498 , DATA : 0x00000000 , ERR = 1
+[5175] [SCO] :  READ ADDR : 0x00000498 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[5175] [GEN] :  READ ADDR : 0x0000025c , DATA : 0x00000000 , ERR = 0
+[5235] [MON] :  READ ADDR : 0x0000025c , DATA : 0x00000000 , ERR = 0
+[5235] [SCO] :  READ ADDR : 0x0000025c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[5235] [GEN] : WRITE ADDR : 0x000003d8 , DATA : 0x9bb90134 , ERR = 0
+[5295] [MON] : WRITE ADDR : 0x000003d8 , DATA : 0x9bb90134 , ERR = 0
+[5295] [SCO] : WRITE ADDR : 0x000003d8 , DATA : 0x9bb90134 , ERR = 0
+[SCO] : DATA STORED DATA : 0x9bb90134 ADDR : 0x000003d8
+---------------------------------------------------------------------
+[5295] [GEN] : WRITE ADDR : 0x00000640 , DATA : 0x62336b44 , ERR = 0
+[5355] [MON] : WRITE ADDR : 0x00000640 , DATA : 0x62336b44 , ERR = 1
+[5355] [SCO] : WRITE ADDR : 0x00000640 , DATA : 0x62336b44 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[5355] [GEN] :  READ ADDR : 0x00000644 , DATA : 0x00000000 , ERR = 0
+[5415] [MON] :  READ ADDR : 0x00000644 , DATA : 0x00000000 , ERR = 1
+[5415] [SCO] :  READ ADDR : 0x00000644 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[5415] [GEN] : WRITE ADDR : 0x00000230 , DATA : 0x8091d147 , ERR = 0
+[5475] [MON] : WRITE ADDR : 0x00000230 , DATA : 0x8091d147 , ERR = 0
+[5475] [SCO] : WRITE ADDR : 0x00000230 , DATA : 0x8091d147 , ERR = 0
+[SCO] : DATA STORED DATA : 0x8091d147 ADDR : 0x00000230
+---------------------------------------------------------------------
+[5475] [GEN] :  READ ADDR : 0x00000130 , DATA : 0x00000000 , ERR = 0
+[5535] [MON] :  READ ADDR : 0x00000130 , DATA : 0x00000000 , ERR = 0
+[5535] [SCO] :  READ ADDR : 0x00000130 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[5535] [GEN] :  READ ADDR : 0x000003fc , DATA : 0x00000000 , ERR = 0
+[5595] [MON] :  READ ADDR : 0x000003fc , DATA : 0x00000000 , ERR = 0
+[5595] [SCO] :  READ ADDR : 0x000003fc , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[5595] [GEN] : WRITE ADDR : 0x00000118 , DATA : 0x0ca0441e , ERR = 0
+[5655] [MON] : WRITE ADDR : 0x00000118 , DATA : 0x0ca0441e , ERR = 0
+[5655] [SCO] : WRITE ADDR : 0x00000118 , DATA : 0x0ca0441e , ERR = 0
+[SCO] : DATA STORED DATA : 0x0ca0441e ADDR : 0x00000118
+---------------------------------------------------------------------
+[5655] [GEN] : WRITE ADDR : 0x000000b4 , DATA : 0xd6582c71 , ERR = 0
+[5715] [MON] : WRITE ADDR : 0x000000b4 , DATA : 0xd6582c71 , ERR = 0
+[5715] [SCO] : WRITE ADDR : 0x000000b4 , DATA : 0xd6582c71 , ERR = 0
+[SCO] : DATA STORED DATA : 0xd6582c71 ADDR : 0x000000b4
+---------------------------------------------------------------------
+[5715] [GEN] :  READ ADDR : 0x000001a8 , DATA : 0x00000000 , ERR = 0
+[5775] [MON] :  READ ADDR : 0x000001a8 , DATA : 0x00000000 , ERR = 0
+[5775] [SCO] :  READ ADDR : 0x000001a8 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[5775] [GEN] : WRITE ADDR : 0x000003d8 , DATA : 0x8719e1eb , ERR = 0
+[5835] [MON] : WRITE ADDR : 0x000003d8 , DATA : 0x8719e1eb , ERR = 0
+[5835] [SCO] : WRITE ADDR : 0x000003d8 , DATA : 0x8719e1eb , ERR = 0
+[SCO] : DATA STORED DATA : 0x8719e1eb ADDR : 0x000003d8
+---------------------------------------------------------------------
+[5835] [GEN] :  READ ADDR : 0x00000320 , DATA : 0x00000000 , ERR = 0
+[5895] [MON] :  READ ADDR : 0x00000320 , DATA : 0x00000000 , ERR = 0
+[5895] [SCO] :  READ ADDR : 0x00000320 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[5895] [GEN] : WRITE ADDR : 0x00000038 , DATA : 0x76f8c07e , ERR = 0
+[5955] [MON] : WRITE ADDR : 0x00000038 , DATA : 0x76f8c07e , ERR = 0
+[5955] [SCO] : WRITE ADDR : 0x00000038 , DATA : 0x76f8c07e , ERR = 0
+[SCO] : DATA STORED DATA : 0x76f8c07e ADDR : 0x00000038
+---------------------------------------------------------------------
+[5955] [GEN] :  READ ADDR : 0x00000310 , DATA : 0x00000000 , ERR = 0
+[6015] [MON] :  READ ADDR : 0x00000310 , DATA : 0x00000000 , ERR = 0
+[6015] [SCO] :  READ ADDR : 0x00000310 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[6015] [GEN] : WRITE ADDR : 0x00000568 , DATA : 0xc2a61965 , ERR = 0
+[6075] [MON] : WRITE ADDR : 0x00000568 , DATA : 0xc2a61965 , ERR = 1
+[6075] [SCO] : WRITE ADDR : 0x00000568 , DATA : 0xc2a61965 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[6075] [GEN] :  READ ADDR : 0x00000118 , DATA : 0x00000000 , ERR = 0
+[6135] [MON] :  READ ADDR : 0x00000118 , DATA : 0x0ca0441e , ERR = 0
+[6135] [SCO] :  READ ADDR : 0x00000118 , DATA : 0x0ca0441e , ERR = 0
+[PASS] Addr: 0x00000118 | Expected: 0x0ca0441e, Got: 0x0ca0441e
+---------------------------------------------------------------------
+[6135] [GEN] : WRITE ADDR : 0x00000224 , DATA : 0xb6904618 , ERR = 0
+[6195] [MON] : WRITE ADDR : 0x00000224 , DATA : 0xb6904618 , ERR = 0
+[6195] [SCO] : WRITE ADDR : 0x00000224 , DATA : 0xb6904618 , ERR = 0
+[SCO] : DATA STORED DATA : 0xb6904618 ADDR : 0x00000224
+---------------------------------------------------------------------
+[6195] [GEN] :  READ ADDR : 0x000001dc , DATA : 0x00000000 , ERR = 0
+[6255] [MON] :  READ ADDR : 0x000001dc , DATA : 0x00000000 , ERR = 0
+[6255] [SCO] :  READ ADDR : 0x000001dc , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[6255] [GEN] :  READ ADDR : 0x00000318 , DATA : 0x00000000 , ERR = 0
+[6315] [MON] :  READ ADDR : 0x00000318 , DATA : 0x00000000 , ERR = 0
+[6315] [SCO] :  READ ADDR : 0x00000318 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[6315] [GEN] : WRITE ADDR : 0x000006b8 , DATA : 0x2655a488 , ERR = 0
+[6375] [MON] : WRITE ADDR : 0x000006b8 , DATA : 0x2655a488 , ERR = 1
+[6375] [SCO] : WRITE ADDR : 0x000006b8 , DATA : 0x2655a488 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[6375] [GEN] : WRITE ADDR : 0x00000164 , DATA : 0x23c76d31 , ERR = 0
+[6435] [MON] : WRITE ADDR : 0x00000164 , DATA : 0x23c76d31 , ERR = 0
+[6435] [SCO] : WRITE ADDR : 0x00000164 , DATA : 0x23c76d31 , ERR = 0
+[SCO] : DATA STORED DATA : 0x23c76d31 ADDR : 0x00000164
+---------------------------------------------------------------------
+[6435] [GEN] :  READ ADDR : 0x000001c0 , DATA : 0x00000000 , ERR = 0
+[6495] [MON] :  READ ADDR : 0x000001c0 , DATA : 0x00000000 , ERR = 0
+[6495] [SCO] :  READ ADDR : 0x000001c0 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[6495] [GEN] :  READ ADDR : 0x000002e4 , DATA : 0x00000000 , ERR = 0
+[6555] [MON] :  READ ADDR : 0x000002e4 , DATA : 0x00000000 , ERR = 0
+[6555] [SCO] :  READ ADDR : 0x000002e4 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[6555] [GEN] : WRITE ADDR : 0x00000130 , DATA : 0x173e7d89 , ERR = 0
+[6615] [MON] : WRITE ADDR : 0x00000130 , DATA : 0x173e7d89 , ERR = 0
+[6615] [SCO] : WRITE ADDR : 0x00000130 , DATA : 0x173e7d89 , ERR = 0
+[SCO] : DATA STORED DATA : 0x173e7d89 ADDR : 0x00000130
+---------------------------------------------------------------------
+[6615] [GEN] : WRITE ADDR : 0x000007f0 , DATA : 0xf0788181 , ERR = 0
+[6675] [MON] : WRITE ADDR : 0x000007f0 , DATA : 0xf0788181 , ERR = 1
+[6675] [SCO] : WRITE ADDR : 0x000007f0 , DATA : 0xf0788181 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[6675] [GEN] :  READ ADDR : 0x0000000c , DATA : 0x00000000 , ERR = 0
+[6735] [MON] :  READ ADDR : 0x0000000c , DATA : 0x00000000 , ERR = 0
+[6735] [SCO] :  READ ADDR : 0x0000000c , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[6735] [GEN] : WRITE ADDR : 0x00000100 , DATA : 0x1eb89a7a , ERR = 0
+[6795] [MON] : WRITE ADDR : 0x00000100 , DATA : 0x1eb89a7a , ERR = 0
+[6795] [SCO] : WRITE ADDR : 0x00000100 , DATA : 0x1eb89a7a , ERR = 0
+[SCO] : DATA STORED DATA : 0x1eb89a7a ADDR : 0x00000100
+---------------------------------------------------------------------
+[6795] [GEN] :  READ ADDR : 0x000003c0 , DATA : 0x00000000 , ERR = 0
+[6855] [MON] :  READ ADDR : 0x000003c0 , DATA : 0x00000000 , ERR = 0
+[6855] [SCO] :  READ ADDR : 0x000003c0 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[6855] [GEN] :  READ ADDR : 0x00000380 , DATA : 0x00000000 , ERR = 0
+[6915] [MON] :  READ ADDR : 0x00000380 , DATA : 0x00000000 , ERR = 0
+[6915] [SCO] :  READ ADDR : 0x00000380 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[6915] [GEN] : WRITE ADDR : 0x000003ac , DATA : 0x1fde98e2 , ERR = 0
+[6975] [MON] : WRITE ADDR : 0x000003ac , DATA : 0x1fde98e2 , ERR = 0
+[6975] [SCO] : WRITE ADDR : 0x000003ac , DATA : 0x1fde98e2 , ERR = 0
+[SCO] : DATA STORED DATA : 0x1fde98e2 ADDR : 0x000003ac
+---------------------------------------------------------------------
+[6975] [GEN] : WRITE ADDR : 0x000007e0 , DATA : 0x6cc4b748 , ERR = 0
+[7035] [MON] : WRITE ADDR : 0x000007e0 , DATA : 0x6cc4b748 , ERR = 1
+[7035] [SCO] : WRITE ADDR : 0x000007e0 , DATA : 0x6cc4b748 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[7035] [GEN] :  READ ADDR : 0x0000011c , DATA : 0x00000000 , ERR = 0
+[7095] [MON] :  READ ADDR : 0x0000011c , DATA : 0x4c1598ac , ERR = 0
+[7095] [SCO] :  READ ADDR : 0x0000011c , DATA : 0x4c1598ac , ERR = 0
+[PASS] Addr: 0x0000011c | Expected: 0x4c1598ac, Got: 0x4c1598ac
+---------------------------------------------------------------------
+[7095] [GEN] :  READ ADDR : 0x00000088 , DATA : 0x00000000 , ERR = 0
+[7155] [MON] :  READ ADDR : 0x00000088 , DATA : 0x00000000 , ERR = 0
+[7155] [SCO] :  READ ADDR : 0x00000088 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[7155] [GEN] : WRITE ADDR : 0x00000120 , DATA : 0xbe31596a , ERR = 0
+[7215] [MON] : WRITE ADDR : 0x00000120 , DATA : 0xbe31596a , ERR = 0
+[7215] [SCO] : WRITE ADDR : 0x00000120 , DATA : 0xbe31596a , ERR = 0
+[SCO] : DATA STORED DATA : 0xbe31596a ADDR : 0x00000120
+---------------------------------------------------------------------
+[7215] [GEN] :  READ ADDR : 0x000000dc , DATA : 0x00000000 , ERR = 0
+[7275] [MON] :  READ ADDR : 0x000000dc , DATA : 0x00000000 , ERR = 0
+[7275] [SCO] :  READ ADDR : 0x000000dc , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[7275] [GEN] : WRITE ADDR : 0x00000260 , DATA : 0x7552e20b , ERR = 0
+[7335] [MON] : WRITE ADDR : 0x00000260 , DATA : 0x7552e20b , ERR = 0
+[7335] [SCO] : WRITE ADDR : 0x00000260 , DATA : 0x7552e20b , ERR = 0
+[SCO] : DATA STORED DATA : 0x7552e20b ADDR : 0x00000260
+---------------------------------------------------------------------
+[7335] [GEN] :  READ ADDR : 0x00000784 , DATA : 0x00000000 , ERR = 0
+[7395] [MON] :  READ ADDR : 0x00000784 , DATA : 0x00000000 , ERR = 1
+[7395] [SCO] :  READ ADDR : 0x00000784 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[7395] [GEN] : WRITE ADDR : 0x000003bc , DATA : 0xbcb3d618 , ERR = 0
+[7455] [MON] : WRITE ADDR : 0x000003bc , DATA : 0xbcb3d618 , ERR = 0
+[7455] [SCO] : WRITE ADDR : 0x000003bc , DATA : 0xbcb3d618 , ERR = 0
+[SCO] : DATA STORED DATA : 0xbcb3d618 ADDR : 0x000003bc
+---------------------------------------------------------------------
+[7455] [GEN] : WRITE ADDR : 0x00000588 , DATA : 0x9eca7528 , ERR = 0
+[7515] [MON] : WRITE ADDR : 0x00000588 , DATA : 0x9eca7528 , ERR = 1
+[7515] [SCO] : WRITE ADDR : 0x00000588 , DATA : 0x9eca7528 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[7515] [GEN] :  READ ADDR : 0x00000078 , DATA : 0x00000000 , ERR = 0
+[7575] [MON] :  READ ADDR : 0x00000078 , DATA : 0x00000000 , ERR = 0
+[7575] [SCO] :  READ ADDR : 0x00000078 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[7575] [GEN] : WRITE ADDR : 0x0000003c , DATA : 0x497ae65b , ERR = 0
+[7635] [MON] : WRITE ADDR : 0x0000003c , DATA : 0x497ae65b , ERR = 0
+[7635] [SCO] : WRITE ADDR : 0x0000003c , DATA : 0x497ae65b , ERR = 0
+[SCO] : DATA STORED DATA : 0x497ae65b ADDR : 0x0000003c
+---------------------------------------------------------------------
+[7635] [GEN] :  READ ADDR : 0x00000244 , DATA : 0x00000000 , ERR = 0
+[7695] [MON] :  READ ADDR : 0x00000244 , DATA : 0x00000000 , ERR = 0
+[7695] [SCO] :  READ ADDR : 0x00000244 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[7695] [GEN] :  READ ADDR : 0x000003dc , DATA : 0x00000000 , ERR = 0
+[7755] [MON] :  READ ADDR : 0x000003dc , DATA : 0x48915939 , ERR = 0
+[7755] [SCO] :  READ ADDR : 0x000003dc , DATA : 0x48915939 , ERR = 0
+[PASS] Addr: 0x000003dc | Expected: 0x48915939, Got: 0x48915939
+---------------------------------------------------------------------
+[7755] [GEN] : WRITE ADDR : 0x000002d8 , DATA : 0xe4d36e2f , ERR = 0
+[7815] [MON] : WRITE ADDR : 0x000002d8 , DATA : 0xe4d36e2f , ERR = 0
+[7815] [SCO] : WRITE ADDR : 0x000002d8 , DATA : 0xe4d36e2f , ERR = 0
+[SCO] : DATA STORED DATA : 0xe4d36e2f ADDR : 0x000002d8
+---------------------------------------------------------------------
+[7815] [GEN] : WRITE ADDR : 0x00000244 , DATA : 0xd9abdff5 , ERR = 0
+[7875] [MON] : WRITE ADDR : 0x00000244 , DATA : 0xd9abdff5 , ERR = 0
+[7875] [SCO] : WRITE ADDR : 0x00000244 , DATA : 0xd9abdff5 , ERR = 0
+[SCO] : DATA STORED DATA : 0xd9abdff5 ADDR : 0x00000244
+---------------------------------------------------------------------
+[7875] [GEN] :  READ ADDR : 0x000000ac , DATA : 0x00000000 , ERR = 0
+[7935] [MON] :  READ ADDR : 0x000000ac , DATA : 0x00000000 , ERR = 0
+[7935] [SCO] :  READ ADDR : 0x000000ac , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[7935] [GEN] :  READ ADDR : 0x000001d8 , DATA : 0x00000000 , ERR = 0
+[7995] [MON] :  READ ADDR : 0x000001d8 , DATA : 0x00000000 , ERR = 0
+[7995] [SCO] :  READ ADDR : 0x000001d8 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[7995] [GEN] : WRITE ADDR : 0x00000238 , DATA : 0x41bb1da1 , ERR = 0
+[8055] [MON] : WRITE ADDR : 0x00000238 , DATA : 0x41bb1da1 , ERR = 0
+[8055] [SCO] : WRITE ADDR : 0x00000238 , DATA : 0x41bb1da1 , ERR = 0
+[SCO] : DATA STORED DATA : 0x41bb1da1 ADDR : 0x00000238
+---------------------------------------------------------------------
+[8055] [GEN] : WRITE ADDR : 0x00000148 , DATA : 0x3fb72adf , ERR = 0
+[8115] [MON] : WRITE ADDR : 0x00000148 , DATA : 0x3fb72adf , ERR = 0
+[8115] [SCO] : WRITE ADDR : 0x00000148 , DATA : 0x3fb72adf , ERR = 0
+[SCO] : DATA STORED DATA : 0x3fb72adf ADDR : 0x00000148
+---------------------------------------------------------------------
+[8115] [GEN] :  READ ADDR : 0x000003dc , DATA : 0x00000000 , ERR = 0
+[8175] [MON] :  READ ADDR : 0x000003dc , DATA : 0x48915939 , ERR = 0
+[8175] [SCO] :  READ ADDR : 0x000003dc , DATA : 0x48915939 , ERR = 0
+[PASS] Addr: 0x000003dc | Expected: 0x48915939, Got: 0x48915939
+---------------------------------------------------------------------
+[8175] [GEN] : WRITE ADDR : 0x000000d0 , DATA : 0xb67011cd , ERR = 0
+[8235] [MON] : WRITE ADDR : 0x000000d0 , DATA : 0xb67011cd , ERR = 0
+[8235] [SCO] : WRITE ADDR : 0x000000d0 , DATA : 0xb67011cd , ERR = 0
+[SCO] : DATA STORED DATA : 0xb67011cd ADDR : 0x000000d0
+---------------------------------------------------------------------
+[8235] [GEN] :  READ ADDR : 0x00000244 , DATA : 0x00000000 , ERR = 0
+[8295] [MON] :  READ ADDR : 0x00000244 , DATA : 0xd9abdff5 , ERR = 0
+[8295] [SCO] :  READ ADDR : 0x00000244 , DATA : 0xd9abdff5 , ERR = 0
+[PASS] Addr: 0x00000244 | Expected: 0xd9abdff5, Got: 0xd9abdff5
+---------------------------------------------------------------------
+[8295] [GEN] : WRITE ADDR : 0x00000228 , DATA : 0x1078da19 , ERR = 0
+[8355] [MON] : WRITE ADDR : 0x00000228 , DATA : 0x1078da19 , ERR = 0
+[8355] [SCO] : WRITE ADDR : 0x00000228 , DATA : 0x1078da19 , ERR = 0
+[SCO] : DATA STORED DATA : 0x1078da19 ADDR : 0x00000228
+---------------------------------------------------------------------
+[8355] [GEN] :  READ ADDR : 0x00000248 , DATA : 0x00000000 , ERR = 0
+[8415] [MON] :  READ ADDR : 0x00000248 , DATA : 0x00000000 , ERR = 0
+[8415] [SCO] :  READ ADDR : 0x00000248 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[8415] [GEN] :  READ ADDR : 0x000002e0 , DATA : 0x00000000 , ERR = 0
+[8475] [MON] :  READ ADDR : 0x000002e0 , DATA : 0x00000000 , ERR = 0
+[8475] [SCO] :  READ ADDR : 0x000002e0 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[8475] [GEN] : WRITE ADDR : 0x00000310 , DATA : 0xce6b4089 , ERR = 0
+[8535] [MON] : WRITE ADDR : 0x00000310 , DATA : 0xce6b4089 , ERR = 0
+[8535] [SCO] : WRITE ADDR : 0x00000310 , DATA : 0xce6b4089 , ERR = 0
+[SCO] : DATA STORED DATA : 0xce6b4089 ADDR : 0x00000310
+---------------------------------------------------------------------
+[8535] [GEN] : WRITE ADDR : 0x000002a0 , DATA : 0x450e066d , ERR = 0
+[8595] [MON] : WRITE ADDR : 0x000002a0 , DATA : 0x450e066d , ERR = 0
+[8595] [SCO] : WRITE ADDR : 0x000002a0 , DATA : 0x450e066d , ERR = 0
+[SCO] : DATA STORED DATA : 0x450e066d ADDR : 0x000002a0
+---------------------------------------------------------------------
+[8595] [GEN] :  READ ADDR : 0x00000104 , DATA : 0x00000000 , ERR = 0
+[8655] [MON] :  READ ADDR : 0x00000104 , DATA : 0x00000000 , ERR = 0
+[8655] [SCO] :  READ ADDR : 0x00000104 , DATA : 0x00000000 , ERR = 0
+---------------------------------------------------------------------
+[8655] [GEN] :  READ ADDR : 0x000004a0 , DATA : 0x00000000 , ERR = 0
+[8715] [MON] :  READ ADDR : 0x000004a0 , DATA : 0x00000000 , ERR = 1
+[8715] [SCO] :  READ ADDR : 0x000004a0 , DATA : 0x00000000 , ERR = 1
+[SCO] : SLAVE ERROR DETECTED
+---------------------------------------------------------------------
+[8715] [GEN] : WRITE ADDR : 0x000002f0 , DATA : 0x541e55c2 , ERR = 0
+[8775] [MON] : WRITE ADDR : 0x000002f0 , DATA : 0x541e55c2 , ERR = 0
+[8775] [SCO] : WRITE ADDR : 0x000002f0 , DATA : 0x541e55c2 , ERR = 0
+[SCO] : DATA STORED DATA : 0x541e55c2 ADDR : 0x000002f0
+---------------------------------------------------------------------
+[8775] [GEN] : WRITE ADDR : 0x000000dc , DATA : 0xbeb813a9 , ERR = 0
+[8835] [MON] : WRITE ADDR : 0x000000dc , DATA : 0xbeb813a9 , ERR = 0
+[8835] [SCO] : WRITE ADDR : 0x000000dc , DATA : 0xbeb813a9 , ERR = 0
+[SCO] : DATA STORED DATA : 0xbeb813a9 ADDR : 0x000000dc
+---------------------------------------------------------------------
+[8835] [GEN] :  READ ADDR : 0x00000080 , DATA : 0x00000000 , ERR = 0
+[8895] [MON] :  READ ADDR : 0x00000080 , DATA : 0x122d4f91 , ERR = 0
+[8895] [SCO] :  READ ADDR : 0x00000080 , DATA : 0x122d4f91 , ERR = 0
+[PASS] Addr: 0x00000080 | Expected: 0x122d4f91, Got: 0x122d4f91
+---------------------------------------------------------------------
+[8895] [GEN] : WRITE ADDR : 0x000000c0 , DATA : 0x95eed758 , ERR = 0
+[8955] [MON] : WRITE ADDR : 0x000000c0 , DATA : 0x95eed758 , ERR = 0
+[8955] [SCO] : WRITE ADDR : 0x000000c0 , DATA : 0x95eed758 , ERR = 0
+[SCO] : DATA STORED DATA : 0x95eed758 ADDR : 0x000000c0
+---------------------------------------------------------------------
+[8955] [GEN] :  READ ADDR : 0x000001b4 , DATA : 0x00000000 , ERR = 0
+[9015] [MON] :  READ ADDR : 0x000001b4 , DATA : 0x6133145b , ERR = 0
+[9015] [SCO] :  READ ADDR : 0x000001b4 , DATA : 0x6133145b , ERR = 0
+[PASS] Addr: 0x000001b4 | Expected: 0x6133145b, Got: 0x6133145b
+=================================================
+               TESTBENCH COMPLETE                
+=================================================
+
+=================================================
+               SCOREBOARD SUMMARY                
+=================================================
+ Total Passed : 11
+ Total Failed : 0
+=================================================
+ Status       : ** ALL TESTS PASSED **
+=================================================
+
+Simulation stopped via $stop(1) at time 9065 NS + 0
+./environment.svh:54     $stop;
+xcelium> coverage -dump test1
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb(tb)
+  scope    :  scope
+  testname :  test1
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_63edcb51_1de3ecd2.ucm
+  data               :  ./cov_work/scope/test1/icc_63edcb51_1de3ecd2.ucd
+xcelium> 
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb(tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_63edcb51_1de3ecd2.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_63edcb51_1de3ecd2.ucd
+TOOL:	xrun	25.03-s001: Exiting on Jul 09, 2026 at 02:17:29 EDT  (total: 00:00:01)
